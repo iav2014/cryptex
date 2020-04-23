@@ -1,0 +1,21 @@
+{
+  "name": "cryptex",
+  "version": "1.0.0",
+  "description": "crypt your nodejs code and execute it",
+  "main": "no_crypt_exec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "crypt",
+    "code",
+    "crypt",
+    "secure",
+    "code",
+    "crypted"
+  ],
+  "author": "Nacho Ariza, oct 2019",
+  "license": "MIT"
+}
