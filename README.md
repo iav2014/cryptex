@@ -7,14 +7,21 @@ protecting it against unauthorized modifications,
 allowing the distribution of the code to third companies
 
 examples,
+
 this is your "normal" code, not encrypted:
+
 /**
  * normal nodejs code,,,
  */
+ 
 const utils = require('./your_code/example.js');
+
 utils.print("hello Nacho");
+
 utils.print("Hello Nacho with callback",(err)=>{
-	if(!err) console.log('no error!');
+
+if(!err) console.log('no error!');
+	
 });
 	
 This is the same code protected and how execute it,
@@ -47,23 +54,32 @@ you can delete the original (hex.js) so you don't reveal the decryption program
 
 
 2) crypt your code
+
 node crypt_your_code.js
+
 This module generate ".js.crypt" file (your code encripted) using 'your_code_password_key' using in Step 1
 (Modify this code to read multiple ".js" file in three directories, using recursion)
 
 3) test your encrypted code
+
 example:
+
 /**
  * test your crypted nodejs module,
  * remember to pass CRYPTEXKEY environment variable
  * and add require('./cryptex'); at the begining of the code
  */
+ 
 require('./cryptex'); // important !
+
 const utils = require('./your_code/example.js.crypt'); // your module crypted !
 
 utils.print("hello Nacho");
+
 utils.print("Hello Nacho with callback",(err)=>{
-	if(!err) console.log('no error!');
+
+if(!err) console.log('no error!');
+	
 });
 
 sh execution format: 
