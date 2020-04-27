@@ -40,14 +40,11 @@ utils.print("Hello Nacho with callback",(err)=>{
 
 How to crypt: - Steps (1,2,3):
 1) crypt the hex.js file function. This hex file, is used to decrypt and execute node_modules.
-node crypt_hex_file.js
 
-RUN: node crypt_hex_file.js
+edit crypt_hex_file.js and put "cryptex_password_key" and "your_code_password_key"
 
-this example using 2 keys, 
-general password (must be put at env) and private code password:
+TYPE: node crypt_hex_file.js
 
-'cryptex_password_key', 'your_code_password_key'
 once you have encrypted the hex.js file.
 
 you can delete the original (hex.js) so you don't reveal the decryption program
@@ -55,9 +52,13 @@ you can delete the original (hex.js) so you don't reveal the decryption program
 
 2) crypt your code
 
+edit the file and put "your_code_password_key". It will be the same password used in crypt_hex_file.js
+
+
 node crypt_your_code.js
 
 This module generate ".js.crypt" file (your code encripted) using 'your_code_password_key' using in Step 1
+
 (Modify this code to read multiple ".js" file in three directories, using recursion)
 
 3) test your encrypted code
@@ -72,7 +73,7 @@ example:
  
 require('./cryptex'); // important !
 
-const utils = require('./your_code/example.js.crypt'); // your module crypted !
+const utils = require('./your_code/example.js.crypt'); // your module encrypted !
 
 utils.print("hello Nacho");
 
